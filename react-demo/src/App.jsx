@@ -16,8 +16,9 @@ function App() {
   return (
     <>
       <BrowserRouter>
-    <Navbar userData={userData}/>
-      
+
+        <Navbar userData={userData} />
+
         <Routes>
           {
             userData ? (
