@@ -26,9 +26,7 @@ export const Page1 = () => {
             data.map((item) => (
                 <div key={item.id}>
                     {item.name} - {item.age} years old
-
                 </div>
-
             ))
         }
         </>

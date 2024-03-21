@@ -6,16 +6,29 @@ import { Landing } from './components/Landing';
 import { Home } from './components/Home';
 import { Page1 } from './components/Page1';
 import { Navbar } from './components/Navbar';
+import { Button } from "./components/Button"
+function App() { //Roditel
 
-function App() {
+  // const [userData, setUserData] = useState('');
+  // console.log("🚀 ~ App ~ userData:", userData)
 
-  const [userData, setUserData] = useState('');
-  console.log("🚀 ~ App ~ userData:", userData)
+
+  //Create state color with initial value blue 
+  // and the function setColor to change the state
+  const [color, setColor] = useState('blue')
 
 
   return (
     <>
-      <BrowserRouter>
+      <h1>{color}</h1>
+
+    {/* We pass the function setColor to the prop changeColor
+        We are making the prop changeColor to be the same as setColor */}
+      <Button changeColor={setColor} /> {/* Dete */}
+
+      <button onClick={() => setColor('red')}>change color</button>
+      {/* <BrowserRouter>
+
 
         <Navbar userData={userData} />
 
@@ -36,7 +49,7 @@ function App() {
           }
 
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </>
   )
 }
