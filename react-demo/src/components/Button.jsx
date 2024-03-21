@@ -1,5 +1,6 @@
 
 // We create a prop with name changeClor 
+// We are going to accept a value through this changeColor
 // We are going to pass a function to the prop so we use it as a function
 export const Button = ({changeColor}) => {
 
